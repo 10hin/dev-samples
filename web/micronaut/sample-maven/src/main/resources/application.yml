@@ -1,0 +1,7 @@
+micronaut:
+  application:
+    name: sampleMaven
+netty:
+  default:
+    allocator:
+      max-order: 3
