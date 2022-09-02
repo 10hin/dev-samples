@@ -12,7 +12,7 @@ public class InfoController {
         return Map.of(
                 "programming-language", "Java",
                 "web-framework", "micronaut",
-                "build-tool", "maven"
+                "build-tool", "gradle"
         );
     }
 
