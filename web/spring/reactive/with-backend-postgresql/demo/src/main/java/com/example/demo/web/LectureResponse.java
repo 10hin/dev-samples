@@ -1,12 +1,13 @@
 package com.example.demo.web;
 
+import com.example.demo.domain.Lecture;
+
 import java.time.ZonedDateTime;
 import java.util.Objects;
 
 public class LectureResponse {
 
     private final String courseId;
-
 
     private final Integer day;
 
@@ -49,4 +50,15 @@ public class LectureResponse {
     public int hashCode() {
         return Objects.hash(courseId, day, start, end);
     }
+
+    public static LectureResponse fromDomain(final Lecture domain) {
+        return new LectureResponse(
+                CourseResponse.courseIdToString(domain.getCourseId()),
+                domain.getDay(),
+                domain.getStart(),
+                domain.getEnd()
+        );
+
+    }
+
 }
